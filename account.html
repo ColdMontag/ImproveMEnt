@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Fredericka+the+Great&family=Mali&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=0.5">
+		<link rel="stylesheet" href="styles.css">
+		<script type="module" src="script.js"></script>
+		<link rel="shortcut icon" type="image/jpg" href="BlueIcon.jpeg"/>
+		<title>Account</title>
+	</head>
+
+	<body>
+		<nav>
+			<a href='index'>Home</a>
+			<a href='survey'>Mental Health</a>
+			<a href='about'>Info</a>
+			<a href='chat'>Chat</a>
+			<a href='yourdata'>Your Data</a>
+		    <a href="https://calendar.yvonnemk.repl.co/">Calendar</a>
+			<a onclick='logout()'>Logout</a>
+		</nav>
+		<main>
+			{{#private}}
+			<div>
+				<h2>Your Account</h2>
+				<h3>{{username}}</h3>
+				<img src='{{avatar}}'>
+			</div>
+			{{/private}}
+			
+			{{^private}}
+				<script>
+					location.href = 'index';
+				</script>
+			{{/private}}
+		</main>
+		<footer>
+			© 2021 The \begin{hacking} Team
+		</footer>
+	</body>
+
+</html>
